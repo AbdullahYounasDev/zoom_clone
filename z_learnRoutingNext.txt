@@ -1,0 +1,37 @@
+Routing in NEXT
+In Next.js, routing is file-based, meaning routes are automatically mapped to the file structure in the pages directory. Here's a breakdown of the patterns you're using and some more routing options:
+
+1. Basic Route:
+Maps directly to a page.
+Example: /pages/home.js → /home
+/pages/home.js
+
+2. Dynamic Route:
+Defines a route with a dynamic segment.
+Example: /pages/meeting/[id].js → /meeting/123
+/pages/meeting/[id].js
+
+3. Optional Catch-All Route:
+Matches /sign-in, /sign-in/abc, etc.
+Example: /pages/[[...sign-in]].js → /sign-in/abc/xyz
+/pages/[[...sign-in]].js
+
+4. Catch-All Route:
+Matches any path after /slug.
+Example: /pages/[...slug].js → /any/path
+/pages/[...slug].js
+
+5. Index Route:
+Maps to the root of the folder.
+Example: /pages/index.js → /
+/pages/index.js
+
+6. Nested Dynamic Route:
+Dynamic route inside a folder.
+Example: /pages/blog/[id]/comments.js → /blog/123/comments
+/pages/blog/[id]/comments.js
+
+7. API Route:
+Server-side route for backend functions.
+Example: /pages/api/user.js → /api/user
+/pages/api/user.js
